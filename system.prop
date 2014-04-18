@@ -11,5 +11,9 @@ nfc.app_log_level=2
 
 # GooManager OTA Update
 ro.goo.developerid=Alberto96
-ro.goo.rom=I9500CM11
+ro.goo.rom=I9500LightCM11
 ro.goo.version=1
+
+# Light Tweaks
+persist.sys.ui.hw=1
+ro.opengles.surface.rgb565=true

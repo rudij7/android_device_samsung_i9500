@@ -42,6 +42,9 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
 TARGET_CPU_VARIANT := cortex-a15
 
+# Dalvik startup with low memory footprint
+TARGET_ARCH_LOWMEM := true
+
 # Kernel
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048

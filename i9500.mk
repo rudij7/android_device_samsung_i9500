@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_small.mk)
 
 LOCAL_PATH := device/samsung/i9500
 
@@ -24,6 +24,7 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
+TARGET_BOOTANIMATION_HALF_RES := true
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -83,6 +84,35 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     hwcomposer.exynos5 \
     libion
+
+# Disable SELinux	
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.selinux=0
+    
+# Development & ADB authentication settings
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.debuggable=1 \
+    ro.adb.secure=0 \
+    ro.secure=0 \
+    ro.allow.mock.location=0
+
+# Enable Low-Ram Configuration by default
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.low_ram=true
+
+# Extended JNI checks
+# The extended JNI checks will cause the system to run more slowly, but they can spot a variety of nasty bugs 
+# before they have a chance to cause problems.
+# Default=true for development builds, set by android buildsystem.
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.kernel.android.checkjni=0 \
+    dalvik.vm.checkjni=0 \
+    dalvik.vm.checkjni=false
+
+# Dalvik optimizations
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dexopt-data-only=1 \
+    dalvik.vm.dexopt-flags=v=a,o=v,m=y,u=y
 
 # IR
 PRODUCT_PACKAGES += \
