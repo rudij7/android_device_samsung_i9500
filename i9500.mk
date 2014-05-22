@@ -237,8 +237,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml
 
 # Device uses high-density artwork where available
-PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # call dalvik heap config
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
