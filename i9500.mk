@@ -144,6 +144,10 @@ PRODUCT_PACKAGES += \
 	libOMX.Exynos.AVC.Encoder \
 	libstagefrighthw
 
+# RIL
+PRODUCT_PACKAGES += \
+	libsamsung-ril
+
 PRODUCT_PROPERTY_OVERRIDES += \
 	mobiledata.interfaces=pdp0,wlan0,gprs,ppp0 \
 	ro.telephony.call_ring.multiple=false \
