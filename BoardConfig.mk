@@ -99,7 +99,6 @@ COMMON_GLOBAL_CFLAGS += -DUSE_NATIVE_SEC_NV12TILED # use format from fw/native
 BOARD_NFC_HAL_SUFFIX := universal5410
 
 # Radio
-BOARD_PROVIDES_LIBRIL := true
 BOARD_MODEM_TYPE := xmm6360
 
 # Wifi

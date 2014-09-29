@@ -17,7 +17,7 @@
 #ifndef RIL_INTERFACE_H
 #define RIL_INTERFACE_H
 
-#define RIL_CLIENT_LIBPATH "libsecril-client.so"
+#define RIL_CLIENT_LIBPATH "libaudio-ril-interface.so"
 
 #define RIL_CLIENT_ERR_SUCCESS      0
 #define RIL_CLIENT_ERR_AGAIN        1

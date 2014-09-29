@@ -380,6 +380,8 @@ on boot
 
 # Permissions for Radio
 	chown radio radio /sys/devices/virtual/misc/multipdp/waketime
+	chown radio system /sys/devices/platform/s5p-ehci/ehci_power
+	chown radio system /sys/devices/platform/s5p-ohci/ohci_power
 
 	chown radio system /sys/devices/virtual/misc/umts_dm0/dm_state
 	chmod 0660 /sys/devices/virtual/misc/umts_dm0/dm_state
