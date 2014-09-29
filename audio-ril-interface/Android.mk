@@ -24,7 +24,7 @@ LOCAL_SRC_FILES := audio-ril-interface.c
 LOCAL_C_INCLUDES := \
 	hardware/ril/samsung-ril/include \
 	hardware/ril/samsung-ril/srs-client/include \
-	device/samsung/i9300/audio/
+	device/samsung/i9500/audio/
 
 LOCAL_SHARED_LIBRARIES := liblog libcutils libsrs-client
 LOCAL_PRELINK_MODULE := false
